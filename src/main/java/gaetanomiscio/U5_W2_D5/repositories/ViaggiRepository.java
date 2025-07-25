@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ViaggiRepository extends JpaRepository<Viaggi, Long> {
+public interface ViaggiRepository extends JpaRepository<Viaggi, Integer> {
 }

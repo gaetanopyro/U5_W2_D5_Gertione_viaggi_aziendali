@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface DipendentiRepository extends JpaRepository<Dipendenti, Long> {
+public interface DipendentiRepository extends JpaRepository<Dipendenti, Integer> {
 
     Optional<Dipendenti> findByUsername(String username);
 
