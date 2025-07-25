@@ -4,12 +4,16 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.util.Random;
 
 @Entity
 @Table(name = "prenotazioni")
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class Prenotazioni {
     @Id
     @GeneratedValue
@@ -23,4 +27,11 @@ public class Prenotazioni {
     private String dataRichiesta;
     private String note;
 
+    public Prenotazioni(Viaggi viaggi, Dipendenti dipendenti, String dataRichiesta, String note) {
+        this.id = new Random().nextInt(1, 10000);
+        this.viaggi = viaggi;
+        this.dipendenti = dipendenti;
+        this.dataRichiesta = dataRichiesta;
+        this.note = note;
+    }
 }

@@ -25,6 +25,7 @@ public class Dipendenti {
     private String nome;
     private String cognome;
     private String email;
+    private String imgUrl;
 
     public Dipendenti(String username, String nome, String cognome, String email) {
         this.id = new Random().nextInt(1, 10000);
