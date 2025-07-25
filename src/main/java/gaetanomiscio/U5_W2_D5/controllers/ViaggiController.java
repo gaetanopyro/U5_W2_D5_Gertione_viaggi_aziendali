@@ -12,7 +12,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-RestController
+
+@RestController
 @RequestMapping("/viaggi")
 public class ViaggiController {
     @Autowired
@@ -47,7 +48,7 @@ public class ViaggiController {
                     .map(err -> err.getDefaultMessage()).toList());
         }
 
-        
+
         Viaggi viaggi = new Viaggi(payload.destinazione(), payload.data(), payload.stato());
         return viaggiService.searchAndUpdate(id, viaggi);
     }
